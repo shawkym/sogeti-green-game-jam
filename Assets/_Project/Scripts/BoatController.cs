@@ -8,6 +8,7 @@ public class BoatController : MonoBehaviour
     [SerializeField] private Transform boatTransform;
     [SerializeField] private Camera mainCameraRef;
 
+    [SerializeField] private float isMovingWithMouse = 0;
     [SerializeField] private float boatStartXPos;
     [SerializeField] private float boatTargetXPos;
 
@@ -71,6 +72,11 @@ public class BoatController : MonoBehaviour
         boatStartXPos = boatTransform.position.x;
         timeToMoveToTarget = Mathf.Abs(mouseXPos - boatTransform.position.x) / boatMoveSpeed;
         currentTimeToMoveToTarget = 0;
+        if (boatStartXPos == boatTargetXPos) {
+            isMovingWithMouse = 0;
+            } else {
+            isMovingWithMouse = 1;
+        }
     }
 
     private void FlipBoat(BoatDirection boatDirection)
@@ -86,7 +92,8 @@ public class BoatController : MonoBehaviour
 
     private void MoveBoat()
     {
-        currentTimeToMoveToTarget += Time.deltaTime;
+        //boatStartXPos = boatStartXPos + 1;
+        currentTimeToMoveToTarget += Time.deltaTime / 2;
         float targetXPos = Mathf.Lerp(boatStartXPos, boatTargetXPos, currentTimeToMoveToTarget / timeToMoveToTarget);
         boatTransform.position = new Vector3(targetXPos, boatTransform.position.y, boatTransform.position.z);
     }

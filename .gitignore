@@ -17,7 +17,12 @@ Assets/Plugins/Editor/JetBrains*
 [Bb]uilds/
 [Ll]ogs/
 Assets/AssetStoreTools*
-
+sogeti-green-game-jam_BurstDebugInformation_DoNotShip*
+sogeti-green-game-jam*
+*.exe
+*.dll
+UserSettings*
+MonoBleedingEdge*
 # Visual Studio cache directory
 .vs/
 
