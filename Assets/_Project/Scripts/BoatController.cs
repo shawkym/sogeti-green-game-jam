@@ -10,7 +10,7 @@ public class BoatController : MonoBehaviour
 
     [SerializeField] private float boatStartXPos;
     [SerializeField] private float boatTargetXPos;
-    
+
     [SerializeField] private float boatMoveSpeed = 10f;
     [SerializeField] private float timeToMoveToTarget = 0;
     [SerializeField] private float currentTimeToMoveToTarget = 0;
@@ -35,11 +35,11 @@ public class BoatController : MonoBehaviour
 
     private void GetInput()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) )
         {
             HandleMouseInput();
         }
-
+        
         if (Input.GetMouseButtonDown(1) && !hook.IsHookProcessing())
         {
             HandleHookThrow();
