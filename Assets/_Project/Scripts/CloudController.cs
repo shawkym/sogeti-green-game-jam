@@ -50,11 +50,12 @@ public class CloudController : MonoBehaviour
         int randomCloudIndex = Random.Range(0, cloudPrefabs.Length);
         Cloud randomCloudPrefab = cloudPrefabs[randomCloudIndex];
         Vector2 cloudRandomSpawnPos = new Vector2(-14, Random.Range(2.8f, 4.5f));
-
+        if (randomCloudPrefab){
         Cloud cloudInstance = Instantiate(randomCloudPrefab, cloudRandomSpawnPos, Quaternion.identity);
         float randomLocalScale = Random.Range(.3f, 1f);
         cloudInstance.transform.localScale = new Vector3(randomLocalScale, randomLocalScale, randomLocalScale);
         cloudInstance.cloudSpeed = Random.Range(MIN_CLOUD_SPEED, MAX_CLOUD_SPEED);
         cloudsAlive.Add(cloudInstance);
+        }
     }
 }

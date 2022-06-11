@@ -49,6 +49,7 @@ public class WaveController : MonoBehaviour
     {
         int randomWaveIndex = Random.Range(0, wavePrefabs.Length);
         Wave randomWavePrefab = wavePrefabs[randomWaveIndex];
+        if (randomWavePrefab){
         Vector2 waveRandomSpawnPos = new Vector2(-10, Random.Range(0.1f, 0.5f));
 
         Wave waveInstance = Instantiate(randomWavePrefab, waveRandomSpawnPos, Quaternion.identity);
@@ -56,5 +57,6 @@ public class WaveController : MonoBehaviour
         waveInstance.transform.localScale = new Vector3(randomLocalScale, randomLocalScale, randomLocalScale);
         waveInstance.waveSpeed = Random.Range(MIN_WAVE_SPEED, MAX_WAVE_SPEED);
         wavesAlive.Add(waveInstance);
+        }
     }
 }

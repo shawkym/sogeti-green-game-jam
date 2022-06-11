@@ -15,7 +15,7 @@ public class Wave : MonoBehaviour
         if (transform.position.x > 14)
         {
             waveOutOfView?.Invoke();
-            Destroy(gameObject);
+            Destroy(this);
         }
     }
 }
