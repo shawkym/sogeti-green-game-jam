@@ -51,6 +51,7 @@ public class Hook : MonoBehaviour
             Debug.Log(trashCollided[i].name + "Collected");
             trashCollectedCount++;
             Destroy(trashCollided[i].gameObject);
+            Score.Increase();
         }
     }
 
