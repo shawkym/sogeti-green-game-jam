@@ -7,10 +7,11 @@ using UnityEngine;
 public class Cloud : MonoBehaviour
 {
     public static Action cloudOutOfView;
-    public float cloudSpeed = 0;
+    public float cloudSpeed = 1;
     void Update()
     {
-        transform.Translate(Vector2.right * cloudSpeed * Time.deltaTime);
+        cloudSpeed = UnityEngine.Random.value;
+        transform.Translate(Vector2.right * cloudSpeed * (Time.deltaTime/3));
         if (transform.position.x > 14)
         {
             cloudOutOfView?.Invoke();
