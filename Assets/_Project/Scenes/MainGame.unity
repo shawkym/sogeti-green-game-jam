@@ -776,7 +776,6 @@ GameObject:
   m_Component:
   - component: {fileID: 170849256}
   - component: {fileID: 170849255}
-  - component: {fileID: 170849254}
   m_Layer: 0
   m_Name: 'fish healthy 3 '
   m_TagString: Fish
@@ -784,32 +783,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &170849254
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170849253}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.018827915, y: 0.15217686}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.72, y: 3.54}
-    newSize: {x: 4.72, y: 3.54}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0798435, y: 1.9615417}
-  m_EdgeRadius: 0
 --- !u!212 &170849255
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2546,7 +2519,6 @@ GameObject:
   m_Component:
   - component: {fileID: 590057896}
   - component: {fileID: 590057895}
-  - component: {fileID: 590057897}
   m_Layer: 0
   m_Name: 'fish sick 1 '
   m_TagString: Fish
@@ -2621,32 +2593,6 @@ Transform:
   m_Father: {fileID: 883119304}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &590057897
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590057894}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0878911, y: 0.054932}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.72, y: 3.54}
-    newSize: {x: 4.72, y: 3.54}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.5774097, y: 2.0238688}
-  m_EdgeRadius: 0
 --- !u!1 &590701755
 GameObject:
   m_ObjectHideFlags: 0
@@ -3199,7 +3145,6 @@ GameObject:
   m_Component:
   - component: {fileID: 808676212}
   - component: {fileID: 808676213}
-  - component: {fileID: 808676214}
   m_Layer: 0
   m_Name: 'fish healthy 2 '
   m_TagString: Fish
@@ -3274,32 +3219,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &808676214
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808676211}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.037878275, y: -0.120667934}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.72, y: 3.54}
-    newSize: {x: 4.72, y: 3.54}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.6235547, y: 3.298664}
-  m_EdgeRadius: 0
 --- !u!1 &838075824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,7 +3229,6 @@ GameObject:
   m_Component:
   - component: {fileID: 838075825}
   - component: {fileID: 838075826}
-  - component: {fileID: 838075827}
   m_Layer: 0
   m_Name: 'fish healthy 5 '
   m_TagString: Fish
@@ -3385,32 +3303,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &838075827
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838075824}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.19239461, y: -0.00000059604645}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.91, y: 3.54}
-    newSize: {x: 5.91, y: 3.54}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.4991045, y: 1.8982339}
-  m_EdgeRadius: 0
 --- !u!1 &838617940
 GameObject:
   m_ObjectHideFlags: 0
@@ -5527,7 +5419,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1319965834}
   - component: {fileID: 1319965835}
-  - component: {fileID: 1319965836}
   m_Layer: 0
   m_Name: 'fish healthy 1 '
   m_TagString: Fish
@@ -5602,32 +5493,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1319965836
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319965833}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.38186717, y: -0.061098814}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.09, y: 4.13}
-    newSize: {x: 7.09, y: 4.13}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.7152734, y: 3.3357148}
-  m_EdgeRadius: 0
 --- !u!1 &1322355899
 GameObject:
   m_ObjectHideFlags: 0
