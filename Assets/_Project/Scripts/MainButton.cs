@@ -18,12 +18,10 @@ public class MainButton : MonoBehaviour
     }
 
     public void OnMouseDown(){
-        Debug.Log("4");
          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void OnPointerClick()
     {
-        Debug.Log("4");
     }
 }
