@@ -18,7 +18,10 @@ public class MainButton : MonoBehaviour
     }
 
     public void OnMouseDown(){
-         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex < 7)
+        SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex + 1);
+        else
+        Application.Quit();
     }
 
     public void OnPointerClick()
