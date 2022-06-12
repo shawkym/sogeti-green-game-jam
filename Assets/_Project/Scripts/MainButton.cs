@@ -19,9 +19,13 @@ public class MainButton : MonoBehaviour
 
     public void OnMouseDown(){
         if (SceneManager.GetActiveScene().buildIndex < 7)
-        SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex + 1);
+        {
+            SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex + 1);
+        }
         else
-        Application.Quit();
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     public void RetryGame()
