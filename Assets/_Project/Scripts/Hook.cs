@@ -14,12 +14,17 @@ public class Hook : MonoBehaviour
     [SerializeField] private bool throwen = false;
 
     [SerializeField] private int trashCollectedCount = 0;
+    public static Action<float> scoreChanged;
+
+    [SerializeField] private int TRASH_TO_BE_COLLECTED = 0;
+    [SerializeField] private Score scoreBehaviour;
 
     private void Start()
     {
         originalYPos = transform.position.y;
         startYPos = originalYPos;
         targetYPos = originalYPos;
+        scoreBehaviour = FindObjectOfType<Score>();
     }
 
     private void Update()
@@ -48,10 +53,19 @@ public class Hook : MonoBehaviour
         Collider2D[] trashCollided = Physics2D.OverlapCircleAll(transform.position, 0.5f);
         for (int i = 0; i < trashCollided.Length; i++)
         {
-            Debug.Log(trashCollided[i].name + "Collected");
-            trashCollectedCount++;
+            if (trashCollided[i] != null && trashCollided[i].CompareTag("Trash"))
+            {
+                scoreChanged?.Invoke(1);
+                if (scoreBehaviour.GetScore() >= TRASH_TO_BE_COLLECTED)
+                {
+                    scoreBehaviour.MoveToNextLevel();
+                }
+            }
+            else
+            {
+                scoreBehaviour.ShowGameOver();
+            }
             Destroy(trashCollided[i].gameObject);
-            Score.Increase();
         }
     }
 
