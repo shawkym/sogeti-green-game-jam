@@ -24,6 +24,11 @@ public class MainButton : MonoBehaviour
         Application.Quit();
     }
 
+    public void RetryGame()
+    {
+        SceneManager.LoadScene("MainGame");
+    }
+
     public void OnPointerClick()
     {
     }

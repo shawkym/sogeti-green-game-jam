@@ -35,7 +35,7 @@ public class Score : MonoBehaviour
 
     public void ShowGameOver()
     {
-        
+        SceneManager.LoadScene("GameOver");
     }
 
     public void MoveToNextLevel()

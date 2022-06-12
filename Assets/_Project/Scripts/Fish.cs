@@ -8,38 +8,27 @@ using Random = UnityEngine.Random;
 public class Fish : MonoBehaviour
 {
     public static Action OutOfView;
-    public float floatSpeed = 1;
-    public bool isDead = false;
-    [SerializeField] private float timeBetweenMoves = 10f;
-    [SerializeField] private float currentTimeBetweenMoves = 10f;
-    [SerializeField] private float timeToMoveToTarget = 1;
-    [SerializeField] private float currentTimeToMoveToTarget = 1;
+    private float floatSpeed = 0;
+    private Vector2 floatDirection = Vector2.right;
 
-    void Die() {
-        isDead = true;
-        transform.Rotate(0.0f, 0.0f, 180.0f, Space.Self);
+    private void Start()
+    {
+        floatDirection = Random.value > 0.5f ? Vector2.right : Vector2.left;
+        floatSpeed = Random.Range(.5f, 1.5f);
     }
-    void Start() {
 
-    }
-    void Move() {
-        //float targetXPos = Mathf.Lerp(transform.position.x  +  Random.Range(10f, 20f), transform.position.y , currentTimeToMoveToTarget / timeToMoveToTarget);
-        transform.position += new Vector3(Random.Range(0.10f, 0.20f), 0, 0);
-    }
     void Update()
     {
-        floatSpeed = UnityEngine.Random.value;
-        if (UnityEngine.Random.value > UnityEngine.Random.value) {
-        transform.Translate(Vector2.right * floatSpeed * (Time.deltaTime / 2));
-        } else {
-        transform.Translate(Vector2.left * floatSpeed * (Time.deltaTime / 3));
-        }
-        currentTimeBetweenMoves -= Time.deltaTime;
-        if (currentTimeBetweenMoves <= 0 && isDead == false)
+        if (transform.position.x <= -9f)
         {
-            Move();
-            timeBetweenMoves = Random.Range(10f, 20f);
-            currentTimeBetweenMoves = timeBetweenMoves;
+            floatDirection = Vector2.right;
+            floatSpeed = Random.Range(.5f, 1.5f);
         }
+        else if(transform.position.x >= 9f)
+        {
+            floatDirection = Vector2.left;
+            floatSpeed = Random.Range(.5f, 1.5f);
+        }
+        transform.Translate(floatDirection * floatSpeed * Time.deltaTime);
     }
 }

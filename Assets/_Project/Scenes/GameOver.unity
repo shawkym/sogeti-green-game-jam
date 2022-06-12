@@ -788,7 +788,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1802448801}
           m_TargetAssemblyTypeName: MainButton, Assembly-CSharp
-          m_MethodName: OnMouseDown
+          m_MethodName: RetryGame
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

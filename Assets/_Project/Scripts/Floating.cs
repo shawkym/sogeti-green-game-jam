@@ -3,18 +3,32 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Floating : MonoBehaviour
 {
     public static Action OutOfView;
-    public float floatSpeed = 1;
+    private float floatSpeed = 0;
+    private Vector2 floatDirection = Vector2.right;
+
+    private void Start()
+    {
+        floatDirection = Random.value > 0.5f ? Vector2.right : Vector2.left;
+        floatSpeed = Random.Range(.05f, .1f);
+    }
+
     void Update()
     {
-        floatSpeed = UnityEngine.Random.value;
-        if (UnityEngine.Random.value > UnityEngine.Random.value) {
-        transform.Translate(Vector2.right * floatSpeed * (Time.deltaTime / 2));
-        } else {
-        transform.Translate(Vector2.left * floatSpeed * (Time.deltaTime / 3));
+        if (transform.position.x <= -9f)
+        {
+            floatDirection = Vector2.right;
+            floatSpeed = Random.Range(.05f, .1f);
         }
+        else if(transform.position.x >= 9f)
+        {
+            floatDirection = Vector2.left;
+            floatSpeed = Random.Range(.05f, .1f);
+        }
+        transform.Translate(floatDirection * floatSpeed * Time.deltaTime);
     }
 }
