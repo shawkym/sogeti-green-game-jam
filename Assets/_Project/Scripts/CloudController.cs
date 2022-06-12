@@ -9,9 +9,9 @@ public class CloudController : MonoBehaviour
     [SerializeField] private Cloud[] cloudPrefabs;
     [SerializeField] private List<Cloud> cloudsAlive;
     [SerializeField] private float MIN_CLOUD_SPEED = 5f;
-    [SerializeField] private float MAX_CLOUD_SPEED = 15f;
+    [SerializeField] private float MAX_CLOUD_SPEED = 25f;
 
-    [SerializeField] private float timeBetweenClouds = 1f;
+    [SerializeField] private float timeBetweenClouds = 50f;
     [SerializeField] private float currentTimeBetweenClouds = 1f;
 
     private void OnEnable()
@@ -30,6 +30,7 @@ public class CloudController : MonoBehaviour
         if (currentTimeBetweenClouds <= 0)
         {
             SpawnCloud();
+            timeBetweenClouds = Random.Range(10f, 20f);
             currentTimeBetweenClouds = timeBetweenClouds;
         }
     }

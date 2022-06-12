@@ -12,10 +12,9 @@ public class Cloud : MonoBehaviour
     {
         cloudSpeed = UnityEngine.Random.value;
         transform.Translate(Vector2.right * cloudSpeed * (Time.deltaTime/3));
-        if (transform.position.x > 14)
-        {
-            cloudOutOfView?.Invoke();
-            Destroy(gameObject);
-        }
+    }
+
+    void OnBecameInvisible() {
+            Destroy(this);
     }
 }

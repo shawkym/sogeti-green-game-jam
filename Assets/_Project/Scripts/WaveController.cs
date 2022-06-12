@@ -11,7 +11,7 @@ public class WaveController : MonoBehaviour
     [SerializeField] private float MIN_WAVE_SPEED = 5f;
     [SerializeField] private float MAX_WAVE_SPEED = 65f;
 
-    [SerializeField] private float timeBetweenWaves = 1f;
+    [SerializeField] private float timeBetweenWaves = 10f;
     [SerializeField] private float currentTimeBetweenWaves = 1f;
 
     private void OnEnable()
@@ -30,6 +30,7 @@ public class WaveController : MonoBehaviour
         if (currentTimeBetweenWaves <= 0)
         {
             SpawnWave();
+            timeBetweenWaves = Random.Range(10f, 20f);
             currentTimeBetweenWaves = timeBetweenWaves;
         }
     }
