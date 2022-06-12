@@ -3167,6 +3167,7 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 608106456}
   levelIndex: 0
+  currentLevelName: MainGame
 --- !u!1 &627098072
 GameObject:
   m_ObjectHideFlags: 0

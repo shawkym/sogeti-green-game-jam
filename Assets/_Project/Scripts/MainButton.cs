@@ -30,7 +30,7 @@ public class MainButton : MonoBehaviour
 
     public void RetryGame()
     {
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene(GameState.currentGameLevel);
     }
 
     public void OnPointerClick()

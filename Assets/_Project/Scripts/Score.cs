@@ -12,6 +12,11 @@ public class Score : MonoBehaviour
     [SerializeField] public TextMeshProUGUI scoreText;
     [SerializeField] public int levelIndex;
 
+    private void Start()
+    {
+        GameState.currentGameLevel = SceneManager.GetActiveScene().name;
+    }
+
     private void OnEnable()
     {
         Hook.scoreChanged += ScoreChanged;
