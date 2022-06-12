@@ -4,31 +4,54 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
     public float score = 0;
     [SerializeField] public TextMeshProUGUI scoreText;
-    public static Score scoreObject;
+    [SerializeField] public int levelIndex;
 
-    private void Awake() {
-        scoreObject = this;
-    }
-
-    public static void Increase()
+    private void OnEnable()
     {
-        scoreObject.score++;
-        //Score.text = "1";
-        scoreObject.scoreText.text = scoreObject.score.ToString();
+        Hook.scoreChanged += ScoreChanged;
     }
 
-    static void Start() {
-
-    }
-
-    static void Update()
+    private void OnDisable()
     {
-
+        Hook.scoreChanged -= ScoreChanged;
+    }
+    
+    private void ScoreChanged(float obj)
+    {
+        score += obj;
+        scoreText.text = "Score: " + score;
     }
 
+    public float GetScore()
+    {
+       return score;
+    }
+
+    public void ShowGameOver()
+    {
+        
+    }
+
+    public void MoveToNextLevel()
+    {
+        if (levelIndex <= 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            ShowYouWinMessage();
+        }
+    }
+
+    private void ShowYouWinMessage()
+    {
+        
+    }
 }
