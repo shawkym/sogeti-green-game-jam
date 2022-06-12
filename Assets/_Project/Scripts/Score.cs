@@ -52,6 +52,6 @@ public class Score : MonoBehaviour
 
     private void ShowYouWinMessage()
     {
-        
+        SceneManager.LoadScene("Victory");
     }
 }

@@ -440,6 +440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40049045}
   - component: {fileID: 40049046}
+  - component: {fileID: 40049047}
   m_Layer: 0
   m_Name: 'fish sick 3 '
   m_TagString: Fish
@@ -454,14 +455,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40049044}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 12.121605, y: -0.49680626, z: -1.22}
   m_LocalScale: {x: 0.38450456, y: 0.38450456, z: 0.38450456}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 883119304}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &40049046
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -514,6 +515,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &40049047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40049044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1948a2e6d55063441a7e6319a22bde6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatSpeed: 1
+  isDead: 1
+  timeBetweenMoves: 50
+  currentTimeBetweenMoves: 50
+  timeToMoveToTarget: 0
+  currentTimeToMoveToTarget: 0
 --- !u!1 &45434943
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 125468332}
   - component: {fileID: 125468333}
+  - component: {fileID: 125468334}
   m_Layer: 0
   m_Name: 'fish healthy 1 '
   m_TagString: Fish
@@ -1045,6 +1065,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &125468334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125468331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1948a2e6d55063441a7e6319a22bde6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatSpeed: 9
+  isDead: 0
+  timeBetweenMoves: 10
+  currentTimeBetweenMoves: 10
+  timeToMoveToTarget: 0
+  currentTimeToMoveToTarget: 0
 --- !u!1 &150576995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,6 +1958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 398595624}
   - component: {fileID: 398595625}
+  - component: {fileID: 398595626}
   m_Layer: 0
   m_Name: 'fish sick 2 '
   m_TagString: Fish
@@ -1934,14 +1973,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398595623}
-  m_LocalRotation: {x: -0, y: -0, z: -0.13052596, w: 0.99144495}
+  m_LocalRotation: {x: 0, y: 0, z: -0.17364825, w: 0.9848078}
   m_LocalPosition: {x: 0.13160443, y: -3.036806, z: -1.27}
   m_LocalScale: {x: 0.43431, y: 0.43431, z: 0.43431}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 883119304}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20}
 --- !u!212 &398595625
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1994,6 +2033,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &398595626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398595623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1948a2e6d55063441a7e6319a22bde6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatSpeed: 1
+  isDead: 1
+  timeBetweenMoves: 50
+  currentTimeBetweenMoves: 50
+  timeToMoveToTarget: 0
+  currentTimeToMoveToTarget: 0
 --- !u!1 &402099092
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,6 +3023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 590057896}
   - component: {fileID: 590057895}
+  - component: {fileID: 590057897}
   m_Layer: 0
   m_Name: 'fish sick 1 '
   m_TagString: Fish
@@ -3032,14 +3090,32 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590057894}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.60876137, w: 0.7933534}
   m_LocalPosition: {x: 6.2316046, y: -3.3968062, z: -1.0548102}
   m_LocalScale: {x: 0.4078, y: 0.4078, z: 0.4078}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 883119304}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 75}
+--- !u!114 &590057897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590057894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1948a2e6d55063441a7e6319a22bde6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatSpeed: 1
+  isDead: 1
+  timeBetweenMoves: 50
+  currentTimeBetweenMoves: 50
+  timeToMoveToTarget: 0
+  currentTimeToMoveToTarget: 0
 --- !u!1 &590701755
 GameObject:
   m_ObjectHideFlags: 0
@@ -3592,6 +3668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 723117129}
   - component: {fileID: 723117130}
+  - component: {fileID: 723117131}
   m_Layer: 0
   m_Name: 'fish healthy 4 '
   m_TagString: Fish
@@ -3666,6 +3743,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &723117131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723117128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1948a2e6d55063441a7e6319a22bde6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatSpeed: 9
+  isDead: 0
+  timeBetweenMoves: 10
+  currentTimeBetweenMoves: 10
+  timeToMoveToTarget: 0
+  currentTimeToMoveToTarget: 0
 --- !u!1 &738538299
 GameObject:
   m_ObjectHideFlags: 0
@@ -8528,6 +8623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143437374}
   - component: {fileID: 2143437375}
+  - component: {fileID: 2143437376}
   m_Layer: 0
   m_Name: 'fish healthy 6 '
   m_TagString: Fish
@@ -8602,6 +8698,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2143437376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143437373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1948a2e6d55063441a7e6319a22bde6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatSpeed: 9
+  isDead: 0
+  timeBetweenMoves: 10
+  currentTimeBetweenMoves: 10
+  timeToMoveToTarget: 0
+  currentTimeToMoveToTarget: 0
 --- !u!1001 &3548662408029157416
 PrefabInstance:
   m_ObjectHideFlags: 0
